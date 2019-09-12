@@ -20,6 +20,6 @@ build:
 
 test_script:
   - dotnet restore
-  - dotnet ef migrations add InitialCreate --project dubbing-backend
-  - dotnet ef database update --project dubbing-backend
+  - dotnet ef migrations add InitialCreate --msbuildprojectextensionspath dubbing-backend
+  - dotnet ef database update --msbuildprojectextensionspath dubbing-backend
   - dotnet run
