@@ -1,22 +1,19 @@
-# image: Visual Studio 2017
-# configuration : Release
+image: Visual Studio 2017
+configuration : Release
 
-# environment:
-#   nodejs_version: "8"
+environment:
+  nodejs_version: "8"
   
-# before_build:
-#   - nuget restore
+before_build:
+  - nuget restore
+  - dotnet restore
+  - dotnet build
 
-# install:
-#   - ps: Install-Product node $env:nodejs_version
-#   - node --version
-#   - npm --version
+install:
+  - ps: Install-Product node $env:nodejs_version
+  - node --version
+  - npm --version
   
-# build:
-#   verbosity: minimal
-#   publish_wap: true
-image: microsoft/dotnet:sdk
-
-- dotnet restore
-- dotnet build
-
+build:
+  verbosity: minimal
+  publish_wap: true
