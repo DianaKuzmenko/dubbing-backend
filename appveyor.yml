@@ -6,7 +6,9 @@ environment:
   
 before_build:
   - nuget restore
-
+  - dotnet restore
+  - dotnet build
+  
 install:
   - ps: Install-Product node $env:nodejs_version
   - node --version
@@ -15,5 +17,4 @@ install:
 build:
   verbosity: minimal
   publish_wap: true
-  - dotnet restore
-  - dotnet build
+
