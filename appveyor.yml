@@ -15,9 +15,6 @@
 # build:
 #   verbosity: minimal
 #   publish_wap: true
-stages:
-  - lint
-  - test
 
 lint_applcation:
   stage: lint
