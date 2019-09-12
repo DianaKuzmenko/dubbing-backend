@@ -20,6 +20,6 @@ build:
 
 test_script:
   - dotnet restore
-  - dotnet ef migrations add InitialCreate
-  - dotnet ef database update
+  - dotnet ef migrations add InitialCreate --project C:\projects\dubbing-backend
+  - dotnet ef database update --project C:\projects\dubbing-backend
   - dotnet run
