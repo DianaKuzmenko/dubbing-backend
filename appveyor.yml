@@ -15,17 +15,8 @@
 # build:
 #   verbosity: minimal
 #   publish_wap: true
+image: microsoft/dotnet:sdk
+script:
+  - dotnet restore
+  - dotnet build
 
-lint_applcation:
-  stage: lint
-  image: microsoft/dotnet:sdk
-  script:
-    - dotnet restore
-    - dotnet build
-
-test_applcation:
-  stage: test
-  image: microsoft/dotnet:sdk
-  script:
-    - dotnet restore
-    - dotnet test
