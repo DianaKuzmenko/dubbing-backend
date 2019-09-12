@@ -16,7 +16,7 @@
 #   verbosity: minimal
 #   publish_wap: true
 image: microsoft/dotnet:sdk
-script:
-  - dotnet restore
-  - dotnet build
+
+- dotnet restore
+- dotnet build
 
