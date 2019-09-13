@@ -20,6 +20,7 @@ build:
 
 test_script:
   - dotnet restore
+  - dotnet add package Microsoft.EntityFrameworkCore.Tools --version 2.0.1
   - dotnet ef migrations add InitialCreate --startup-project "C:\projects\dubbing-backend\web"
   - dotnet ef database update --startup-project "C:\projects\dubbing-backend\web"
   - dotnet run
