@@ -20,6 +20,6 @@ build:
 
 test_script:
   - dotnet restore
-  - dotnet ef migrations add InitialCreate --msbuildprojectextensionspath C:\projects\dubbing-backend
-  - dotnet ef database update --msbuildprojectextensionspath C:\projects\dubbing-backend
+  - dotnet ef migrations add InitialCreate --msbuildprojectextensionspath "C:\projects\dubbing-backend"
+  - dotnet ef database update --msbuildprojectextensionspath "C:\projects\dubbing-backend"
   - dotnet run
