@@ -7,8 +7,8 @@ environment:
 before_build:
   - nuget restore
   - dotnet restore
-  - dotnet build
   - dotnet add package Microsoft.EntityFrameworkCore.Tools --version 2.0.1
+  - dotnet build
 
   
 install:
