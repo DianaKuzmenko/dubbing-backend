@@ -1,15 +1,9 @@
 image: Visual Studio 2017
-configuration : 
-  - Debug
-  - Release
 
 before_build:
   - nuget restore
   - dotnet restore
-  - dotnet ef migrations add InitialCreate --startup-project "C:\projects\dubbing-backend\web"
-  - dotnet ef database update InitialCreate
   - dotnet build
-  - dotnet run
   
 install:
   - ps: Install-Product node $env:nodejs_version
