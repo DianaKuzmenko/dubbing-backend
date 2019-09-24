@@ -2,20 +2,7 @@ image: Visual Studio 2017
 configuration : 
   - Debug
   - Release
-  
-matrix: 
-  fast_finish: false
-  
-platform:
-  - x64
-  - x86
-  
-environment:
-  nodejs_version: "8"
-  matrix: 
-    - TOOLCHAIN: msv15
-  APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2017
-  
+
 before_build:
   - nuget restore
   - dotnet restore
